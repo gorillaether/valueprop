@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DID DApp Solutions - Presentation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply bg-slate-950 text-white font-sans;
+                font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            }
+            h1 { @apply text-4xl md:text-5xl font-bold; }
+            h2 { @apply text-3xl md:text-4xl font-bold text-pink-500; }
+            h3 { @apply text-2xl md:text-3xl font-bold text-pink-400; }
+            p { @apply text-lg md:text-xl text-slate-300; }
+            .container { @apply mx-auto px-4 sm:px-6 lg:px-8; }
+            .btn {
+                @apply inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium 
+                       ring-offset-background transition-colors focus-visible:outline-none 
+                       focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 
+                       disabled:pointer-events-none disabled:opacity-50;
+            }
+            .btn-primary {
+                @apply bg-pink-600 text-white hover:bg-pink-700 h-10 px-4 py-2;
+            }
+            .btn-secondary {
+                @apply border border-pink-600 bg-transparent text-pink-500 hover:bg-pink-900 h-10 px-4 py-2;
+            }
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'slate-950': '#0F172A',
+                        'slate-900': '#0F172A', /* Use a single dark for consistency */
+                        'slate-800': '#1F2937',
+                        'slate-700': '#334155',
+                        'slate-400': '#94A3B8',
+                        'slate-300': '#CBD5E1',
+                        'pink-600': '#EC4899',
+                        'pink-700': '#DB2777',
+                        'pink-500': '#F472B6',
+                        'pink-400': '#FB7185',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-950 text-white min-h-screen flex flex-col">
+
+    <header class="w-full border-b border-slate-700/40 bg-slate-900/80 backdrop-blur sticky top-0 z-40">
+        <div class="container mx-auto flex h-20 items-center justify-between px-4">
+            <div class="flex items-center gap-2">
+                <span class="text-2xl font-bold text-white">DID - Solutions Presentation</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow flex items-center justify-center p-8">
+        <div id="slideshow-container" class="relative w-full max-w-4xl bg-slate-900 border border-slate-700 rounded-lg shadow-xl p-8 md:p-12 min-h-[500px] flex flex-col justify-between">
+            
+            <div class="slide active text-center flex flex-col justify-center items-center h-full gap-6">
+                <img src="https://did.gorillaether.com/icon.png" alt="DID Logo" class="h-24 w-24 mb-4">
+                <h1 class="text-pink-500">Unlocking Creator Potential</h1>
+                <p class="mt-4 max-w-2xl">Discover how DID empowers creators with ownership, simplicity, and a future-proof business model.</p>
+            </div>
+
+            <div class="slide text-center flex flex-col justify-center items-center h-full gap-6 hidden">
+                <span class="text-6xl" role="img" aria-label="Crown">👑</span>
+                <h2>1. True Ownership of Your Content & Audience</h2>
+                <p class="mt-4 max-w-2xl">Break free from platform control. Your content on IPFS, your audience on the blockchain. You own your legacy, your data, and your community.</p>
+                <div class="flex flex-col md:flex-row gap-4 mt-6">
+                    <div class="p-4 bg-slate-800 rounded-lg shadow-md flex-1">
+                        <h3 class="mb-2">Content on IPFS</h3>
+                        <p class="text-sm text-slate-400">Decentralized storage, censorship-resistant.</p>
+                    </div>
+                    <div class="p-4 bg-slate-800 rounded-lg shadow-md flex-1">
+                        <h3 class="mb-2">Audience as NFTs</h3>
+                        <p class="text-sm text-slate-400">Blockchain-verified subscribers, portable community.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide text-center flex flex-col justify-center items-center h-full gap-6 hidden">
+                <span class="text-6xl" role="img" aria-label="Money Bag">💸</span>
+                <h2>2. Ditch the Monthly Bills & Developer Fees</h2>
+                <p class="mt-4 max-w-2xl">Your DID profile is a free, self-managed website. Update content, events, and offerings instantly without hidden costs or coding knowledge.</p>
+                <div class="flex flex-col md:flex-row gap-4 mt-6">
+                    <div class="p-4 bg-slate-800 rounded-lg shadow-md flex-1">
+                        <h3 class="mb-2">Free Hosting</h3>
+                        <p class="text-sm text-slate-400">No recurring website fees.</p>
+                    </div>
+                    <div class="p-4 bg-slate-800 rounded-lg shadow-md flex-1">
+                        <h3 class="mb-2">Zero Dev Costs</h3>
+                        <p class="text-sm text-slate-400">Easy dashboard management.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide text-center flex flex-col justify-center items-center h-full gap-6 hidden">
+                <span class="text-6xl" role="img" aria-label="Bridge">🌉</span>
+                <h2>3. Mass-Market Access (Web2-Friendly Bridge)</h2>
+                <p class="mt-4 max-w-2xl">Welcome everyone, not just crypto natives. Seamless signup with email and credit card payments, while retaining all the power of Web3.</p>
+                <div class="flex flex-col md:flex-row gap-4 mt-6">
+                    <div class="p-4 bg-slate-800 rounded-lg shadow-md flex-1">
+                        <h3 class="mb-2">Email Signup</h3>
+                        <p class="text-sm text-slate-400">Familiar onboarding for all users.</p>
+                    </div>
+                    <div class="p-4 bg-slate-800 rounded-lg shadow-md flex-1">
+                        <h3 class="mb-2">Credit Card Payments</h3>
+                        <p class="text-sm text-slate-400">Stripe integration for easy transactions.</p>
+                    </div>
+                    <div class="p-4 bg-slate-800 rounded-lg shadow-md flex-1">
+                        <h3 class="mb-2">Invisible Wallets</h3>
+                        <p class="text-sm text-slate-400">Embedded crypto wallets, simplified.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide text-center flex flex-col justify-center items-center h-full gap-6 hidden">
+                <span class="text-6xl" role="img" aria-label="Gear">⚙️</span>
+                <h2>4. An Automated, All-in-One Business Hub</h2>
+                <p class="mt-4 max-w-2xl">Streamline your entire creator business under one link. Content sales, events, service requests, and more – all managed from a single, intuitive dashboard.</p>
+                <div class="flex flex-col md:flex-row gap-4 mt-6">
+                    <div class="p-4 bg-slate-800 rounded-lg shadow-md flex-1">
+                        <h3 class="mb-2">Unified Dashboard</h3>
+                        <p class="text-sm text-slate-400">Manage all aspects of your brand.</p>
+                    </div>
+                    <div class="p-4 bg-slate-800 rounded-lg shadow-md flex-1">
+                        <h3 class="mb-2">Monetization Tools</h3>
+                        <p class="text-sm text-slate-400">Sell content, subscriptions, and services.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="pagination-buttons" class="absolute bottom-8 left-0 right-0 flex justify-center gap-2 mt-8">
+                </div>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('.slide');
+            const paginationContainer = document.getElementById('pagination-buttons');
+            let currentSlideIndex = 0;
+
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    if (i === index) {
+                        slide.classList.remove('hidden');
+                        slide.classList.add('active');
+                    } else {
+                        slide.classList.add('hidden');
+                        slide.classList.remove('active');
+                    }
+                });
+                updatePaginationButtons();
+            }
+
+            function updatePaginationButtons() {
+                paginationContainer.innerHTML = '';
+                slides.forEach((_, i) => {
+                    const button = document.createElement('button');
+                    button.classList.add('btn', 'h-8', 'w-8', 'rounded-full', 'flex', 'items-center', 'justify-center', 'text-xs');
+                    if (i === currentSlideIndex) {
+                        button.classList.add('btn-primary');
+                    } else {
+                        button.classList.add('btn-secondary');
+                    }
+                    button.textContent = (i + 1).toString();
+                    button.onclick = () => {
+                        currentSlideIndex = i;
+                        showSlide(currentSlideIndex);
+                    };
+                    paginationContainer.appendChild(button);
+                });
+            }
+
+            showSlide(currentSlideIndex); // Initialize first slide and buttons
+        });
+    </script>
+</body>
+</html>
